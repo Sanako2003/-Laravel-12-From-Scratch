@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+    {{-- @extends('layouts.app')
+ 
+@section('content')
+ 
+    <h2 class="text-3xl font-bold">Welcome to Our Homepage</h2>
+    <p class="mt-4 text-lg text-gray-600">Discover more about us and get in touch.</p>
+ 
+@endsection --}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
@@ -15,6 +24,7 @@
     </style>
 @endif
 </head>
+
 
 <body class="bg-gray-100 text-gray-900">
 <header class="bg-white shadow-md py-4">
@@ -35,5 +45,6 @@
 <footer class="mt-10 py-6 bg-white text-center shadow-md">
     <p class="text-gray-600">&copy; 2025 Brand. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
