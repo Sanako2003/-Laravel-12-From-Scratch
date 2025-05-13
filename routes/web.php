@@ -11,3 +11,4 @@ Route::get('/third', function () {
     return view('third'); // <-- third.blade.php file doesn't exist
 });
 
+Route::view('/', 'home');
