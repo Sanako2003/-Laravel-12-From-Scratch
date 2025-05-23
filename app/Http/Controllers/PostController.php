@@ -25,14 +25,20 @@ class PostController extends Controller
     }
 
     // Example method: Store a newly created resource in storage.
-    public function store(Request $request)
+    public function store(StorePostRequest $request) 
     {
-        Post::create([
-            'title' => $request->input('title'),
-            'text' => $request->input('text'),
-            'category_id' => $request->input('category_id'),
-        ]);
- 
+        // $request->validate([ 
+        //     'title' => ['required'],
+        //     'text' => ['required'],
+        //     'category_id' => ['required'],
+        // ]); 
+
+        // Post::create([
+        //     'title' => $request->input('title'),
+        //     'text' => $request->input('text'),
+        //     'category_id' => $request->input('category_id'),
+        // ]);
+        Post::create($request->validated()); 
         return redirect()->route('posts.index');
     }
     // Example method: Display the specified resource.
