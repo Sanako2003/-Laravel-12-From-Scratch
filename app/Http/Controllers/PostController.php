@@ -26,9 +26,11 @@ class PostController extends Controller
     }
 
     // Example method: Display the specified resource.
-    public function show(string $id)
+    public function show(Post $post) 
     {
-        // Example: return view('posts.show', ['id' => $id]);
+        // $post = Post::find($postId); 
+ 
+        return view('post', compact('post'));
     }
 
     // Example method: Show the form for editing the specified resource.
@@ -48,4 +50,8 @@ class PostController extends Controller
     {
         // Logic to delete a post
     }
+    // public function show($postId)
+    // {
+ 
+    // }
 } 
